@@ -1,10 +1,76 @@
- using UnityEngine;
+
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
     [SerializeField] string playScene = "SampleScene";
-    [SerializeField] string mainMenuScene = "StartScene";
+    [SerializeField] string mainMenuScene = "Menu Scene";
+
+    [Tooltip("Drag in an options menu panel, if one exists")]
+    [SerializeField] GameObject optionsMenuPanel;
+
+    [Tooltip("Drag in an pause menu panel, if one exists")]
+    [SerializeField] GameObject pauseMenuPanel;
+
+    [SerializeField] bool IsPauseMenuAvailable = false;
+    [HideInInspector] public static bool IsGamePaused = false;
+
+    void Update()
+    {
+        PauseMenu();
+    }
+
+    public void PauseMenu()
+    {
+        if (IsPauseMenuAvailable)
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                if (IsGamePaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
+            }
+        }
+    }
+
+    public void OptionsMenuClose()
+    {
+        optionsMenuPanel.SetActive(false);
+    }
+
+    public void OptionsMenuOpen()
+    {
+        optionsMenuPanel.SetActive(true);
+    }
+
+    public void Pause()
+    {
+        Cursor.visible = true;
+        pauseMenuPanel.SetActive(true);
+        Time.timeScale = 0f;
+        IsGamePaused = true;
+    }
+
+    public void Resume()
+    {
+        Cursor.visible = false;
+        pauseMenuPanel.SetActive(false);
+        Time.timeScale = 1f;
+        IsGamePaused = false;
+    }
+
+    public void ReturnToMainMenu()
+    {
+        Resume();
+        Cursor.visible = true;
+        SceneManager.LoadScene(mainMenuScene);
+    }
 
     public void StartGame()
     {
