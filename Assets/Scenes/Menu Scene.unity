@@ -219,6 +219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2398124211498701523, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6864946363210879627, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -275,7 +279,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &364805052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -633,6 +637,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2398124211498701523, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6864946363210879627, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
       propertyPath: m_TargetGraphic
       value: 
@@ -855,7 +863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.6037736, g: 0.09967959, b: 0.5037039, a: 0.81960785}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1057,6 +1065,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1872130661047403612, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2398124211498701523, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
+      propertyPath: m_RaycastTarget
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6864946363210879627, guid: 64794d1510925404db9ea15e59b8442e, type: 3}
